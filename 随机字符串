@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+#随机产生字符串
+import random
+# 1=<i<5
+li = []
+for i in range(6):
+    r=random.randrange(0,5)
+    if r ==2 or r==4:
+        i_num=random.randrange(0,10)
+        li.append(str(i_num))        #join拼接时必须要是字符串。
+    else:
+        i_char = random.randrange(65, 91)
+        c=chr(i_char)
+        li.append(c)
+
+b="".join(li)
+print(b)
